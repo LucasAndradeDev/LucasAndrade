@@ -10,6 +10,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { projectsData } from '@/lib/data';
 import { useScroll, useTransform, motion } from 'framer-motion';
+import { IconType } from 'react-icons';
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -29,17 +30,30 @@ export const Project = ({
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
   // Mapeamento dos ícones
-  const iconMap = {
-    react: FaReact,
-    node: FaNodeJs,
-    js: FaJs,
-    figma: FaFigma,
-    css: FaCss3,
-    docker: FaDocker,
-    typescript: SiTypescript,
-    postgresql: BiLogoPostgresql,
-    tailwind: RiTailwindCssFill,
-    mysql: GrMysql
+  enum TechIcons {
+    React = 'react',
+    Node = 'node',
+    Js = 'js',
+    Figma = 'figma',
+    Css = 'css',
+    Docker = 'docker',
+    Typescript = 'typescript',
+    Postgresql = 'postgresql',
+    Tailwind = 'tailwind',
+    Mysql = 'mysql',
+  }
+  
+  const iconMap: Record<TechIcons, IconType> = {
+    [TechIcons.React]: FaReact,
+    [TechIcons.Node]: FaNodeJs,
+    [TechIcons.Js]: FaJs,
+    [TechIcons.Figma]: FaFigma,
+    [TechIcons.Css]: FaCss3,
+    [TechIcons.Docker]: FaDocker,
+    [TechIcons.Typescript]: SiTypescript,
+    [TechIcons.Postgresql]: BiLogoPostgresql,
+    [TechIcons.Tailwind]: RiTailwindCssFill,
+    [TechIcons.Mysql]: GrMysql,
   };
 
   return (
@@ -58,17 +72,17 @@ export const Project = ({
 
         {/* Tecnologias utilizadas */}
         <div className="mt-4 flex gap-4 flex-wrap">
-          {technologies.map((tech) => {
-            const IconComponent = iconMap[tech.icon.toLowerCase()]; 
+        {technologies.map((tech) => {
+  const iconKey = tech.icon.toLowerCase() as TechIcons; // forçando o tipo
+  const IconComponent = iconMap[iconKey];
 
-            return (
-              <div key={tech.id} className="flex items-center gap-2">
-                {/* Renderiza o ícone */}
-                {IconComponent && <IconComponent className="text-gray-200" size={20} />}
-                <span className="text-sm text-gray-100">{tech.name}</span>
-              </div>
-            );
-          })}
+  return (
+    <div key={tech.id} className="flex items-center gap-2">
+      {IconComponent && <IconComponent className="text-gray-200" size={20} />}
+      <span className="text-sm text-gray-100">{tech.name}</span>
+    </div>
+  );
+})}
         </div>
       </div>
 
