@@ -1,0 +1,17 @@
+import React from 'react'
+import { FaWhatsapp } from 'react-icons/fa'
+
+const ButtonWpp = () => {
+  return (
+    <a
+      href="https://wa.me/5585996331923" 
+      target="_blank"
+      rel="noopener noreferrer"
+      className="fixed bottom-10 right-12 flex z-50 items-center justify-center w-16 h-16 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600  duration-300 transition-transform  hover:scale-110 active:scale-100 hover:shadow-xl"
+    >
+      <FaWhatsapp size={30} />
+    </a>
+  )
+}
+
+export default ButtonWpp
