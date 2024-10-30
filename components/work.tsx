@@ -11,7 +11,7 @@ const Work = () => {
           <br />
           <span className='under-line'>Recentes</span>
         </h1>
-        <div className='flex flex-col gap-[200px] py-4 xl:gap-[150px]'>
+        <div className='flex flex-col gap-[50px] py-4 xl:gap-[150px]'>
           {projectsData.map((project, i) => (
             <React.Fragment key={i}>
               <Project {...project} />
