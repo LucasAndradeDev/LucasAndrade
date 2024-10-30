@@ -4,8 +4,8 @@ export const sendMessageRoute = async (data: { name: string; email: string; phon
   try {
     console.log('Dados sendo enviados:', data)
 
-    // Envia a solicitação para o backend
-    const response = await axios.post('http://localhost:5000/mail', data, {
+    // Atualize a URL para o seu backend na nuvem
+    const response = await axios.post('https://backend-p1qvhqjxz-lucas-projects-2c06066a.vercel.app/mail', data, {
       headers: {
         'Content-Type': 'application/json',
       },
