@@ -1,19 +1,19 @@
-# 🌐 NetxJS Portfolio
+# 🌐 Site Portfolio
 
-Este é um projeto de portfólio criado com [Next.js](https://nextjs.org/) e estilizado com Tailwind CSS. O objetivo deste site é apresentar meus projetos e habilidades de forma interativa e responsiva.
+Este repositório contém o meu portfólio, criado com [Next.js](https://nextjs.org/) e estilizado com [Tailwind CSS](https://tailwindcss.com/). O objetivo deste site é apresentar meus projetos e habilidades de forma interativa e responsiva.
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Framework**: [Next.js](https://nextjs.org/) 🌟
-- **Estilização**: [Tailwind CSS](https://tailwindcss.com/) 🎨
-- **Animações**: [Framer Motion](https://www.framer.com/motion/) 🎞️
-- **Gerenciamento de Estado**: [TanStack Query](https://tanstack.com/query/latest) 📦
-- **Formulários**: [React Hook Form](https://react-hook-form.com/) 📋
-- **Design de Componentes**: [Radix UI](https://www.radix-ui.com/) 🛠️
+- **Next.js** ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white) Framework React para construção de aplicações web.
+- **React** ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) Biblioteca JavaScript para construção de interfaces de usuário.
+- **Tailwind CSS** ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwind-css&logoColor=white) Framework CSS para estilização e design responsivo.
+- **Framer Motion** ![Framer Motion](https://img.shields.io/badge/Framer_Motion-00BFFF?style=flat-square&logo=framer&logoColor=white) Biblioteca para animações e transições.
+- **React Hook Form** ![React Hook Form](https://img.shields.io/badge/React_Hook_Form-EC5B3B?style=flat-square&logo=react-hook-form&logoColor=white) Biblioteca para gerenciamento de formulários.
+- **TanStack Query** ![TanStack Query](https://img.shields.io/badge/TanStack_Query-00A1E4?style=flat-square&logo=tanstack&logoColor=white) Biblioteca para gerenciamento de estado e chamadas de API.
 
 ## 🚀 Acesse o Portfólio
 
-Você pode visualizar o projeto no seguinte link: [NetxJS Portfolio](https://lucas-andrade-dev.vercel.app/)
+Você pode visualizar o projeto no seguinte link: [Site Portfolio](https://lucas-andrade-dev.vercel.app/) 🌐
 
 ## 📚 Estrutura de Dependências
 
@@ -47,4 +47,4 @@ Este projeto está licenciado sob a licença ISC.
 
 ## 🙏 Agradecimentos
 
-Agradeço a todos que chegaram até aqui, muito obrigado por me acompanhar e apoiar!
+Agradeço a todos que chegaram até aqui! Muito obrigado por me acompanhar e apoiar! 🌟
