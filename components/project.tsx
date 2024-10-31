@@ -42,7 +42,7 @@ export const Project = ({
     Tailwind = 'tailwind',
     Mysql = 'mysql',
   }
-  
+
   const iconMap: Record<TechIcons, IconType> = {
     [TechIcons.React]: FaReact,
     [TechIcons.Node]: FaNodeJs,
@@ -72,17 +72,17 @@ export const Project = ({
 
         {/* Tecnologias utilizadas */}
         <div className="mt-4 flex gap-4 flex-wrap">
-        {technologies.map((tech) => {
-  const iconKey = tech.icon.toLowerCase() as TechIcons; // forçando o tipo
-  const IconComponent = iconMap[iconKey];
+          {technologies.map((tech) => {
+            const iconKey = tech.icon.toLowerCase() as TechIcons; // forçando o tipo
+            const IconComponent = iconMap[iconKey];
 
-  return (
-    <div key={tech.id} className="flex items-center gap-2">
-      {IconComponent && <IconComponent className="text-gray-200" size={20} />}
-      <span className="text-sm text-gray-100">{tech.name}</span>
-    </div>
-  );
-})}
+            return (
+              <div key={tech.id} className="flex items-center gap-2">
+                {IconComponent && <IconComponent className="text-gray-200" size={20} />}
+                <span className="text-sm text-gray-100">{tech.name}</span>
+              </div>
+            );
+          })}
         </div>
       </div>
 
