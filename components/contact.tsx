@@ -2,7 +2,6 @@
 
 // Importação das bibliotecas
 import { useForm } from 'react-hook-form' // Biblioteca para lidar com formulários
-import { useQueryClient } from '@tanstack/react-query' // Biblioteca para interagir com o cache
 import { Send } from 'lucide-react'
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
@@ -16,7 +15,7 @@ import { sendMessageRoute } from '@/http/sendMessage.route'
 // Definição da interface para os dados do formulário
 interface MensagemFormData {
   name: string
-  email: string
+  email?: string // Opcional
   phone: string
   message: string
 }
@@ -25,6 +24,7 @@ const Contact = () => {
   const [isClient, setIsClient] = useState(false)
   const [successMessage, setSuccessMessage] = useState('')
   const [showMessage, setShowMessage] = useState(false)
+  const [messageSubmit, setMessageSubmit] = useState<boolean | null>(null)
 
   useEffect(() => {
     setIsClient(true)
@@ -40,24 +40,21 @@ const Contact = () => {
       const response = await sendMessageRoute(data)
       console.log('Resposta do envio:', response)
 
-      // Atualiza a mensagem de sucesso
+      setMessageSubmit(true)
       setSuccessMessage('Mensagem enviada com sucesso!')
       setShowMessage(true)
       reset()
 
       // Oculta a mensagem após 3 segundos
-      setTimeout(() => {
-        setShowMessage(false)
-      }, 3000)
+      setTimeout(() => setShowMessage(false), 3000)
     } catch (error) {
       console.error('Erro ao enviar a mensagem:', error)
+      setMessageSubmit(false)
       setSuccessMessage('Erro ao enviar a mensagem. Tente novamente.')
       setShowMessage(true)
 
       // Oculta a mensagem após 3 segundos
-      setTimeout(() => {
-        setShowMessage(false)
-      }, 3000)
+      setTimeout(() => setShowMessage(false), 3000)
     }
   }
 
@@ -66,6 +63,17 @@ const Contact = () => {
       id="Contact"
       className="relative bg-[url(https://github.com/oguzbits/icon-parallax-background/raw/master/gif/Icon-Parallax.gif)] bg-cover bg-center bg-no-repeat py-28"
     >
+      {/* Exibindo a mensagem de sucesso */}
+      {showMessage && (
+        <div
+          className={`fixed bottom-10 sm:bottom-4 left-1/2 transform -translate-x-1/2 py-2 px-4 rounded-md shadow-lg transition-opacity duration-300 z-50 w-5/6 md:w-1/2 lg:w-1/3 h-auto text-center align-middle ${messageSubmit ? 'bg-green-500' : 'bg-red-500'
+            } text-white`}
+        >
+          {successMessage}
+        </div>
+      )}
+
+
       {/* Overlay para reduzir a opacidade */}
       <div className="absolute inset-0 bg-black opacity-60" />
 
@@ -114,9 +122,10 @@ const Contact = () => {
               {...register('phone')}
               type="text"
               required
-              placeholder='Número para contato'
-              className='w-full rounded-md border border-white/25 bg-transparent py-3 px-4 text-white placeholder:text-white/50 outline-none transition-all duration-200 focus:border-blue focus:border-opacity-75' />
-            
+              placeholder="Número para contato"
+              className="w-full rounded-md border border-white/25 bg-transparent py-3 px-4 text-white placeholder:text-white/50 outline-none transition-all duration-200 focus:border-blue focus:border-opacity-75"
+            />
+
             <textarea
               {...register('message')}
               placeholder="Escreva sua mensagem ..."
@@ -132,13 +141,6 @@ const Contact = () => {
             </button>
           </motion.div>
         </form>
-
-        {/* Exibindo a mensagem de sucesso */}
-        {showMessage && (
-          <div className="fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-green-500 text-white py-2 px-4 rounded-md shadow-lg transition-opacity duration-300">
-            {successMessage}
-          </div>
-        )}
       </div>
 
       {/* Renderiza os botões apenas no cliente */}

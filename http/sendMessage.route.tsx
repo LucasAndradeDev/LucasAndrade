@@ -1,26 +1,26 @@
-import axios from 'axios'
-
-export const sendMessageRoute = async (data: { name: string; email: string; phone: string; message: string }) => {
+export const sendMessageRoute = async (data: { name: string; email?: string; phone: string; message: string }) => {
   try {
-    console.log('Dados sendo enviados:', data)
+    console.log('Dados sendo enviados:', data);
 
-    // Atualize a URL para o seu backend na nuvem
-    const response = await axios.post('https://backend-p1qvhqjxz-lucas-projects-2c06066a.vercel.app/mail', data, {
+    const response = await fetch('https://backend-ebon-tau.vercel.app/mail', {
+      method: 'POST',
+      mode: 'cors', // Use o modo padrão "cors"
       headers: {
         'Content-Type': 'application/json',
       },
-    })
+      body: JSON.stringify(data),
+    });
 
-    // Verifica se a resposta está OK
-    if (response.status === 200) {
-      console.log('Mensagem enviada com sucesso:', response.data)
-      return response.data
+    if (response.ok) {
+      const responseData = await response.json();
+      console.log('Mensagem enviada com sucesso:', responseData);
+      return responseData;
     } else {
-      console.error('Erro no envio da mensagem:', response.statusText)
-      throw new Error(`Erro ao enviar mensagem: ${response.statusText}`)
+      console.error('Erro no envio da mensagem:', response.statusText);
+      throw new Error(`Erro ao enviar mensagem: ${response.statusText}`);
     }
   } catch (error) {
-    console.error('Erro ao enviar mensagem:', error)
-    throw error
+    console.error('Erro ao enviar mensagem:', error);
+    throw error;
   }
-}
+};

@@ -31,7 +31,7 @@ const Footer = () => {
       </div>
 
       {/* Linha divisória sutil e Link para o topo */}
-      <div className='mt-6 border-t border-gray-700 pt-4'>
+      <div className='mt-6 border-t border-gray-700 pt-4 pt-10'>
         <div className='flex justify-center space-x-6'>
          
         </div>

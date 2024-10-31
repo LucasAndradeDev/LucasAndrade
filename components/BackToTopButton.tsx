@@ -37,7 +37,7 @@ const BackToTopButton = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed bottom-10 right-32 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-indigo-500 text-white shadow-lg shadow-indigo-700/50 transition-transform duration-300 hover:scale-110 active:scale-100 hover:shadow-xl"
+          className="fixed bottom-6 right-32 z-40 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-indigo-500 text-white shadow-lg shadow-indigo-700/50 transition-transform duration-300 hover:scale-110 active:scale-100 hover:shadow-xl"
         >
           <ArrowUp className="h-6 w-6 transition-transform duration-200 group-hover:-translate-y-1 group-hover:scale-110" />
         </motion.button>
