@@ -1,7 +1,8 @@
 'use client'
 
 import Image from 'next/image'
-import { animate, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
+import { useEffect, useState, useRef } from 'react'
 
 import {
   Accordion,
@@ -9,7 +10,7 @@ import {
   AccordionItem,
   AccordionTrigger
 } from '@/components/ui/accordion'
-import FadeIn from '@/lib/variants'
+
 
 import { askedQuestions } from '@/lib/data'
 
@@ -76,6 +77,24 @@ export const tech = [
 ]
 
 const FAQ = () => {
+  const [isVisible, setIsVisible] = useState(false)
+  const faqRef = useRef<HTMLDivElement | null>(null)
+
+  const handleScroll = () => {
+    if (faqRef.current) {
+      const rect = faqRef.current.getBoundingClientRect()
+      const isVisible = rect.top < window.innerHeight && rect.bottom > 0
+      setIsVisible(isVisible)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
     <section className='bg-secondary pb-20 pt-36' id='FAQ'>
       <div className='container sm:px-2'>
@@ -84,32 +103,29 @@ const FAQ = () => {
             Perguntas <br /> <span className='under-line'>mais frequentes</span>
           </h1>
         </div>
-        <motion.div
-          variants={FadeIn('up', 0.2)}
-          initial='hidden'
-          whileInView={'show'}
-          viewport={{ once: true, amount: 0.8 }}
-        >
-          <div className='mx-auto mt-12 flex max-w-3xl flex-col justify-center rounded-md bg-primary py-8 sm:px-2 xl:py-4'>
-            {askedQuestions.map(qst => (
-              <Accordion
-                type='single'
-                collapsible
-                className='w-full text-left'
-                key={qst.id}
-              >
-                <AccordionItem value='item-1'>
-                  <AccordionTrigger className='mx-2 text-xl font-medium hover:no-underline'>
-                    {qst.qs}
-                  </AccordionTrigger>
-                  <AccordionContent className='px-2 pt-4 text-[16px] leading-6'>
-                    {qst.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-            ))}
-          </div>
-        </motion.div>
+
+        <div
+          ref={faqRef}
+          className={`mx-auto mt-12 flex max-w-3xl flex-col justify-center rounded-md bg-primary py-8 sm:px-2 xl:py-4 ${isVisible ? 'animate__animated animate__bounceIn' : ''}`}>
+          {askedQuestions.map(qst => (
+            <Accordion
+              type='single'
+              collapsible
+              className='w-full text-left'
+              key={qst.id}
+            >
+              <AccordionItem value='item-1'>
+                <AccordionTrigger className='mx-2 text-xl font-medium hover:no-underline'>
+                  {qst.qs}
+                </AccordionTrigger>
+                <AccordionContent className='px-2 pt-4 text-[16px] leading-6'>
+                  {qst.answer}
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          ))}
+        </div>
+
       </div>
       <div className='center mt-36 flex justify-center py-4'>
         <div className='flex w-full max-w-[1200px] items-center justify-center overflow-x-hidden'>

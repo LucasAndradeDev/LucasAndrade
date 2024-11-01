@@ -5,7 +5,7 @@ import { Project } from '@/components/project'
 const Work = () => {
   return (
     <section id='work' className='bg-primary'>
-      <div className='container w-full py-[100px] lg:py-[200px]'>
+      <div className='container w-full py-[50px] lg:py-[100px]'>
         <h1 className='mt-8 px-2 py-4 text-[40px] font-bold uppercase leading-[3rem] md:px-0'>
           Projetos 
           <br />

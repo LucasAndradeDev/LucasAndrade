@@ -1,0 +1,30 @@
+.multi-line-type span {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #0000;
+  background:
+    linear-gradient(-90deg, #00DFFC 5px, #0000 0) 10px 0,
+    linear-gradient(#00DFFC 0 0) 0 0;
+  background-size: calc(var(--n) * 1ch) 200%;
+  -webkit-background-clip: padding-box, text;
+  background-clip: padding-box, text;
+  background-repeat: no-repeat;
+  animation: typewriter calc(var(--n) * 0.1s) steps(var(--n)) forwards,
+             blink 0.7s steps(1) infinite;
+  animation-delay: var(--delay);
+  max-width: calc(var(--n) * 1ch); /* Garante que o cursor não exceda o texto */
+}
+
+@keyframes typewriter {
+  from { background-size: 0 200%; }
+  to { background-size: calc(var(--n) * 1ch) 200%; }
+}
+
+@keyframes blink {
+  50% { background-position: 0 -100%, 0 0; }
+}
+
+.hidden {
+  display: none; /* Oculta o elemento quando não está visível */
+}
