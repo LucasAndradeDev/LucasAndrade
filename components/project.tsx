@@ -1,7 +1,7 @@
 'use client';
 
 import { FaReact, FaNodeJs, FaJs, FaFigma, FaCss3, FaDocker } from 'react-icons/fa';
-import { SiTypescript } from 'react-icons/si'; // Importação corrigida
+import { SiTypescript } from 'react-icons/si'; 
 import { BiLogoPostgresql } from 'react-icons/bi';
 import { RiTailwindCssFill } from 'react-icons/ri';
 import { GrMysql } from "react-icons/gr";

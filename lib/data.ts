@@ -8,7 +8,7 @@ export const projectsData = [
       'Ferramenta intuitiva que ajuda aspirantes de TI a descobrirem sua trilha profissional ideal. Através de um formulário dinâmico que simula cenários reais, o sistema sugere carreiras alinhadas aos interesses e habilidades dos usuários, oferecendo um ponto de partida inspirador para quem busca direcionamento e segurança na escolha da sua carreira em tecnologia.',
     technologies: [
       { id: 1, name: 'React', icon: 'react' },
-      { id: 2, name: 'CSS', icon: 'css' },
+      { id: 2, name: 'Tailwind', icon: 'tailwind' },
       { id: 3, name: 'JavaScript', icon: 'js' }
     ]
   },
@@ -56,6 +56,20 @@ export const projectsData = [
       { id: 4, name: 'TypeScript', icon: 'typescript' },
       { id: 5, name: 'Tailwind', icon: 'tailwind' },
       { id: 6, name: 'PostgreSQL', icon: 'postgresql' }
+    ]
+  },
+  {
+    id: 5,
+    image: '/projects/05.png',
+    category: 'Front-end',
+    title: 'Barber Shop',
+    description:
+      'A barber shop se trata de uma landing page de uma barbearia, com uma interface simples e intuitiva para o usuário, permitindo que ele explore os serviços oferecidos pela empresa e entre em contato com a equipe para agendar um horário.',
+    technologies: [
+      { id: 1, name: 'React', icon: 'react' },
+      { id: 2, name: 'TypeScript', icon: 'typescript' },
+      { id: 3, name: 'Tailwind', icon: 'tailwind' },
+      { id: 4, name: 'Figma', icon: 'figma' },
     ]
   }
 ];
