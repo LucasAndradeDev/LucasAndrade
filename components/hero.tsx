@@ -32,7 +32,7 @@ const Hero = () => {
         <div className="flex flex-col items-center justify-between gap-10 xl:flex-row xl:pt-8 py-10">
           {/* Text */}
           <div className="text-center xl:text-left">
-            <span>Hi, I'm</span>
+            <span>Hi, I&apos;m</span>
             <h1 className="text-[40px] font-bold capitalize leading-[3rem]">
               Lucas <br />
               <span className="under-line">Andrade</span>

@@ -60,8 +60,8 @@ const Contact = () => {
     }
   };
 
-   // Exemplo de uso de useEffect para verificar a visibilidade
-   useEffect(() => {
+  // Exemplo de uso de useEffect para verificar a visibilidade
+  useEffect(() => {
     const handleScroll = () => {
       if (formRef.current && contactRef.current) {
         const rect = formRef.current.getBoundingClientRect();
@@ -100,12 +100,13 @@ const Contact = () => {
       <div className="container mx-auto flex flex-col items-center gap-y-12 px-6 text-lg md:flex-row md:justify-between">
         <div ref={contactRef} className={`w-full ${isVisible ? 'animate__animated animate__zoomIn' : ''}`}>
           <h1 className="text-4xl font-extrabold uppercase leading-snug tracking-wide text-white md:text-5xl lg:text-6xl">
-          Let's work  <br />
+            Let&apos;s work  <br />
             <span className="under-line">together</span>
           </h1>
           <p className="mt-4 text-gray-200 text-base md:text-lg lg:text-xl">
-          I'm available to discuss your ideas and turn your project into reality. Send me a message and let's get started!
+            I&apos;m available to discuss your ideas and turn your project into reality. Send me a message and let&apos;s get started!
           </p>
+
         </div>
 
         <form
