@@ -7,9 +7,9 @@ const Work = () => {
     <section id='work' className='bg-primary'>
       <div className='container w-full py-[50px] lg:py-[100px]'>
         <h1 className='mt-8 px-2 py-4 text-[40px] font-bold uppercase leading-[3rem] md:px-0'>
-          Projetos 
+          Recent
           <br />
-          <span className='under-line'>Recentes</span>
+          <span className='under-line'>Projects</span>
         </h1>
         <div className='flex flex-col gap-[50px] py-4 xl:gap-[150px]'>
           {projectsData.map((project, i) => (

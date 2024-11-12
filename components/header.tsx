@@ -16,13 +16,13 @@ const Header = () => {
           spy={true}
           smooth={true}
           className="cursor-pointer flex items-center gap-2"
-          aria-label="Ir para a página inicial"
+          aria-label="Home"
         >
           <Image
             src="/logo-LA.png"
             height={54}
             width={44}
-            alt="Logo da empresa"
+            alt="Logo"
             className="hover:scale-105 transition-transform duration-300"
           />
         </Link>
@@ -38,7 +38,7 @@ const Header = () => {
             aria-label="Fale no WhatsApp"
           >
             <FaWhatsapp size={30} className="mr-2" />
-            Fale no WhatsApp
+            Send a message
           </a>
         </div>
 

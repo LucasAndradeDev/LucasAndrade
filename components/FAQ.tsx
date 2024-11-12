@@ -100,7 +100,7 @@ const FAQ = () => {
       <div className='container sm:px-2'>
         <div>
           <h1 className='text-[40px] font-bold uppercase leading-[3rem]'>
-            Perguntas <br /> <span className='under-line'>mais frequentes</span>
+          Frequently <br /> <span className='under-line'>asked questions</span>
           </h1>
         </div>
 

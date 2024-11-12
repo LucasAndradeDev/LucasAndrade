@@ -9,43 +9,43 @@ import {
 const servicesList = [
   {
     id: 1,
-    title: 'Landing Pages Irresistíveis',
-    description: 'Se você deseja transformar visitantes em clientes, estou aqui para ajudar! Crio páginas de destino super atraentes e otimizadas para garantir as melhores conversões.'
+    title: 'Irresistible Landing Pages',
+    description: "If you're looking to turn visitors into customers, I'm here to help! I create highly engaging, optimized landing pages to ensure the best conversions."
   },
   {
     id: 2,
-    title: 'Sites Institucionais que Impressionam',
-    description: 'Deixe sua marca brilhar! Eu desenvolvo sites institucionais que mostram tudo sobre sua empresa, seus valores e seus serviços de forma cativante e profissional.'
+    title: 'Impressive Company Websites',
+    description: "Let your brand shine! I develop company websites that showcase everything about your business, values, and services in a captivating and professional way."
   },
   {
     id: 3,
-    title: 'Seu E-commerce de Sucesso',
-    description: 'Está pronto para vender online? Posso montar um e-commerce personalizado com tudo que você precisa: integração de pagamentos e gerenciamento de produtos para impulsionar suas vendas!'
+    title: 'Your Successful E-commerce',
+    description: "Ready to sell online? I can set up a customized e-commerce site with everything you need: payment integration and product management to boost your sales!"
   },
   {
     id: 4,
-    title: 'Manutenção de Software e Sites',
-    description: 'Não deixe seu sistema ficar desatualizado! Ofereço suporte e atualizações contínuas para garantir que seu software e site funcionem sempre com segurança e eficiência.'
+    title: 'Software and Website Maintenance',
+    description: "Don’t let your system become outdated! I offer ongoing support and updates to ensure your software and website always run securely and efficiently."
   },
   {
     id: 5,
-    title: 'Desenvolvimento de Software Sob Medida',
-    description: 'Tem uma ideia em mente? Estou aqui para transformar sua visão em realidade! Desenvolvo sistemas personalizados que atendem exatamente às suas necessidades, garantindo inovação e eficiência.'
+    title: 'Custom Software Development',
+    description: "Have an idea in mind? I'm here to bring your vision to life! I develop custom systems tailored to your needs, ensuring innovation and efficiency."
   },
   {
     id: 6,
-    title: 'Soluções Personalizadas para Você',
-    description: 'Sei que cada empresa é única. Por isso, crio soluções de software sob medida que se encaixam perfeitamente nas suas necessidades específicas, elevando sua operação a um novo nível.'
+    title: 'Personalized Solutions for You',
+    description: "I know each company is unique. That’s why I create custom software solutions that perfectly fit your specific needs, elevating your operations to a new level."
   },
   {
     id: 7,
-    title: 'Consultoria Técnica Especializada',
-    description: 'Vamos aproveitar a tecnologia a seu favor! Minha consultoria técnica traz insights valiosos para otimizar seus processos e garantir que você esteja sempre um passo à frente da concorrência.'
+    title: 'Specialized Technical Consulting',
+    description: "Let’s make technology work for you! My technical consulting provides valuable insights to optimize your processes and keep you one step ahead of the competition."
   },
   {
     id: 8,
-    title: 'Chatbots Inteligentes que Fazem a Diferença',
-    description: 'Quer melhorar o atendimento ao cliente? Desenvolvo chatbots inteligentes que automatizam interações e respondem rapidamente, 24 horas por dia, 7 dias por semana!'
+    title: 'Intelligent Chatbots That Make a Difference',
+    description: "Looking to enhance customer service? I develop smart chatbots that automate interactions and provide quick responses, 24/7!"
   }
 ];
 
@@ -72,7 +72,7 @@ const ServicesDetails = () => {
       className={`py-12 px-6 bg-secondary ${isVisible ? 'animate__animated animate__zoomIn' : ''}`}
     >
       <div className="container mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12 text-white">Serviços Oferecidos</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 text-white">My Services</h2>
         <div className="flex flex-col space-y-6">
           {servicesList.map(service => (
             <Accordion key={service.id} type='single' collapsible className='w-full'>

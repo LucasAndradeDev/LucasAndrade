@@ -32,15 +32,15 @@ const Hero = () => {
         <div className="flex flex-col items-center justify-between gap-10 xl:flex-row xl:pt-8 py-10">
           {/* Text */}
           <div className="text-center xl:text-left">
-            <span>Olá, eu sou</span>
+            <span>Hi, I'm</span>
             <h1 className="text-[40px] font-bold capitalize leading-[3rem]">
               Lucas <br />
               <span className="under-line">Andrade</span>
             </h1>
             <div className="py-8 max-w-2xl">
               <p>
-                Desenvolvedor full-stack apaixonado por criar soluções que transformam ideias em valor real.
-                Estou sempre em busca de novas tecnologias e práticas para entregar produtos de alta qualidade.
+              Full-stack developer passionate about creating solutions that transform ideas into real value.
+              I am always looking for new technologies and practices to deliver high-quality products.
                 <br />
               </p>
             </div>
@@ -51,7 +51,7 @@ const Hero = () => {
                   target="_blank"
                   className="flex items-center space-x-2 rounded-full border-2 border-blue-500 px-6 py-3 font-medium uppercase text-blue-500 transition-all hover:bg-blue-500 hover:text-white"
                 >
-                  <span className="text-sm">Acesse meu CV</span>
+                  <span className="text-sm">Access my CV</span>
                   <Download className="w-5 h-5" />
                 </Link>
               </div>

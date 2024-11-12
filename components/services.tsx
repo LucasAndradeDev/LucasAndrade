@@ -6,8 +6,8 @@ import { useEffect, useState, useRef } from 'react';
 const Services = () => {
   const [isVisibleLeft, setIsVisibleLeft] = useState(false);
   const [isVisibleRight, setIsVisibleRight] = useState(false);
-  const servicesRefLeft = useRef<HTMLDivElement | null>(null); 
-  const servicesRefRight = useRef<HTMLDivElement | null>(null); 
+  const servicesRefLeft = useRef<HTMLDivElement | null>(null);
+  const servicesRefRight = useRef<HTMLDivElement | null>(null);
 
   const handleScroll = () => {
     if (servicesRefLeft.current) {
@@ -36,12 +36,12 @@ const Services = () => {
             className={`w-full pt-14 ${isVisibleLeft ? 'animate__animated animate__fadeInLeft' : ''}`}
           >
             <h1 className="pb-4 text-[40px] font-bold leading-[3rem]">
-              Soluções que Alavancam seu Negócio!
+              Solutions that Boost your Business!
             </h1>
             <p>
-              Cansado de perder oportunidades por falta de uma presença digital impactante?
-              Transformo suas necessidades em soluções reais e totalmente sob medida para o seu negócio.
-              Desde plataformas robustas até aplicativos simples, tenho as ferramentas para resolver seu problema.
+              Tired of missing out on opportunities due to a lack of impactful digital presence?
+              I transform your needs into real solutions that are completely tailored to your business.
+              From robust platforms to simple applications, I have the tools to solve your problem.
             </p>
             <div className="flex justify-between space-x-4 py-8">
               <div className="flex flex-col items-center justify-center">
@@ -60,20 +60,19 @@ const Services = () => {
             <div className="flex items-center space-x-6 bg-primary p-4 rounded-md shadow-lg">
               <p className="text-6xl font-bold text-blue">01</p>
               <div>
-                <h2 className="mb-2 text-2xl font-bold">Desenvolvimento Front-end</h2>
+                <h2 className="mb-2 text-2xl font-bold">Front-end Development</h2>
                 <p>
-                  Transformo seu design Figma/XD em uma aplicação web totalmente responsiva
-                  e moderna, usando as melhores tecnologias: React, Next.js e Tailwind CSS.
+                I transform your Figma/XD design into a fully responsive and modern web application, using the best technologies: React, Next.js and Tailwind CSS.
                 </p>
               </div>
             </div>
             <div className="flex items-center space-x-6 bg-primary p-4 rounded-md shadow-lg">
               <p className="text-6xl font-bold text-blue">02</p>
               <div>
-                <h2 className="mb-2 text-2xl font-bold">Desenvolvimento Back-end</h2>
+                <h2 className="mb-2 text-2xl font-bold">Back-end Development</h2>
                 <p>
-                  Construa um backend escalável e seguro com as tecnologias de ponta para
-                  garantir alta performance e estabilidade ao seu negócio.
+                Build a scalable and secure backend with cutting-edge technologies to
+                ensure high performance and stability for your business.
                 </p>
               </div>
             </div>

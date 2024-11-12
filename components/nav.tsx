@@ -3,19 +3,19 @@ import { Link } from 'react-scroll';
 
 const menu = [
   {
-    name: 'Serviços',
+    name: 'Services',
     href: 'services'
   },
   {
-    name: 'Trabalhos',
+    name: 'Works',
     href: 'work'
   },
   {
-    name: 'Dúvidas',
+    name: 'FAQ',
     href: 'FAQ'
   },
   {
-    name: 'Contato',
+    name: 'Contact',
     href: 'Contact'
   }
 ];

@@ -35,7 +35,7 @@ const Contact = () => {
       console.log('Resposta do envio:', response);
 
       setMessageSubmit(true);
-      setSuccessMessage('Mensagem enviada com sucesso!');
+      setSuccessMessage('Message sent successfully!');
       setShowMessage(true);
       reset();
 
@@ -44,7 +44,7 @@ const Contact = () => {
     } catch (error) {
       console.error('Erro ao enviar a mensagem:', error);
       setMessageSubmit(false);
-      setSuccessMessage('Erro ao enviar a mensagem. Tente novamente.');
+      setSuccessMessage('Error sending message. Please try again.');
       setShowMessage(true);
 
       // Oculta a mensagem após 3 segundos
@@ -100,11 +100,11 @@ const Contact = () => {
       <div className="container mx-auto flex flex-col items-center gap-y-12 px-6 text-lg md:flex-row md:justify-between">
         <div ref={contactRef} className={`w-full ${isVisible ? 'animate__animated animate__zoomIn' : ''}`}>
           <h1 className="text-4xl font-extrabold uppercase leading-snug tracking-wide text-white md:text-5xl lg:text-6xl">
-            Vamos trabalhar <br />
-            <span className="under-line">juntos!</span>
+          Let's work  <br />
+            <span className="under-line">together</span>
           </h1>
           <p className="mt-4 text-gray-200 text-base md:text-lg lg:text-xl">
-            Estou disponível para discutir suas ideias e transformar seu projeto em realidade. Envie uma mensagem e vamos começar!
+          I'm available to discuss your ideas and turn your project into reality. Send me a message and let's get started!
           </p>
         </div>
 
@@ -116,26 +116,27 @@ const Contact = () => {
           <input
             {...register('name')}
             type="text"
-            placeholder="Seu nome"
+            placeholder="Your name"
             required
             className="w-full rounded-md border border-white/25 bg-transparent py-3 px-4 text-white placeholder:text-white/50 outline-none transition-all duration-200 focus:border-blue focus:border-opacity-75"
           />
           <input
             {...register('email')}
             type="email"
-            placeholder="Seu email (opcional)"
+            placeholder="Your email(optional)"
             className="w-full rounded-md border border-white/25 bg-transparent py-3 px-4 text-white placeholder:text-white/50 outline-none transition-all duration-200 focus:border-blue focus:border-opacity-75"
           />
           <input
             {...register('phone')}
             type="text"
             required
-            placeholder="Número para contato"
+            placeholder="Your phone number"
             className="w-full rounded-md border border-white/25 bg-transparent py-3 px-4 text-white placeholder:text-white/50 outline-none transition-all duration-200 focus:border-blue focus:border-opacity-75"
           />
           <textarea
             {...register('message')}
-            placeholder="Escreva sua mensagem ..."
+            placeholder="Your message"
+
             id="message"
             className="w-full h-32 resize-none rounded-md border border-white/25 bg-transparent py-3 px-4 text-white placeholder:text-white/50 outline-none transition-all duration-200 focus:border-blue focus:border-opacity-75"
           ></textarea>
@@ -143,7 +144,7 @@ const Contact = () => {
             className="mt-6 flex w-full items-center justify-center gap-x-3 rounded-full bg-blue px-5 py-3 text-md font-semibold text-secondary transition-all duration-300 hover:bg-lighted hover:scale-105 active:scale-100 shadow-lg"
             type="submit"
           >
-            <p>Envie sua mensagem</p>
+            <p>Send Message</p>
             <Send className="h-5 w-5" />
           </button>
         </form>

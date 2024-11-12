@@ -6,19 +6,19 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 export const menu = [
   {
-    name: 'Serviços',
+    name: 'Services',
     href: '#services'
   },
   {
-    name: 'Trabalhos',
+    name: 'Works',
     href: '/#works'
   },
   {
-    name: 'Dúvidas',
+    name: 'FAQ',
     href: '/#FAQ'
   },
   {
-    name: 'Contato',
+    name: 'Contact',
     href: '/#Contact'
   }
 ];

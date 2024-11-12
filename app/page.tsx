@@ -1,6 +1,6 @@
 'use client' // Adicionado no topo para definir o arquivo como Client Component
 
-import BackToTopButton from '@/components/BackToTopButton'
+import BackToTopButton from '@/components/button-back-to-top'
 import FAQ from '@/components/FAQ'
 import ButtonWpp from '@/components/button.wpp'
 import Contact from '@/components/contact'
